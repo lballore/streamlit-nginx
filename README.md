@@ -28,7 +28,7 @@ FROM lucone83/streamlit-nginx:python3.8
 <your Dockerfile code>
 
 CMD ["streamlit", "run", "your_application_file_path.py"]
-
+```
 
 ## Advanced use
 
