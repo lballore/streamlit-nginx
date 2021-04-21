@@ -10,12 +10,13 @@ The [Docker](https://www.docker.com) image is configured using a _server upstrea
 
 ## Supported tags
 
-Here's the supp:orted tags with the corresponding `Dockerfile`:
+Here's the supported tags with the corresponding `Dockerfile`:
 
 - [`python3.6`](python3.6.dockerfile)
 - [`python3.7`](python3.7.dockerfile)
 - [`python3.8`](python3.8.dockerfile)
 - [`python3.9`](python3.9.dockerfile)
+- `latest` (Only available in Docker Hub, it is an alias for the most recent Python version, `3.9` at the moment)
 
 
 ## How to use
@@ -46,5 +47,5 @@ COPY --chown=streamlitapp your-nginx-file-path /home/streamlitapp/.nginx/nginx.c
 < ... rest of your Dockerfile code>
 ```
 
-**NOTE:** at the moment I haven't introduced the possibility to change the app directory in an easy way. The Docker image has a default user (`streamlitapp`) with its own home directory (`/home/streamlitapp`), which is also set as `WORKDIR`.
+**NOTE:** at the moment I haven't introduced the possibility to change the app directory in an easy way. The Docker image has a default user (`streamlitapp`) with its own home directory (`/home/streamlitapp`).
 At the moment it is not possible to change the nginx listening port, which is set to `8080`.
