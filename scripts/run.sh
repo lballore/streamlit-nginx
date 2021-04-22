@@ -6,7 +6,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cd $SCRIPT_DIR/../
 
 TAG=""
-PORT=""
+PORT="80"  # default port
 
 while getopts ":t:p:" opt; do
     case $opt in
@@ -19,9 +19,6 @@ while getopts ":t:p:" opt; do
         ;;
     p)
         PORT="$OPTARG"
-        if [ -z "${PORT}" ]; then
-            PORT="80"
-        fi
         ;;
     \?)
         echo "Invalid option -$OPTARG" >&2

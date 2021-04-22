@@ -34,6 +34,7 @@ ENV PATH "${PATH}:/home/streamlitapp/src/bin:/home/streamlitapp/src/server/bin"
 WORKDIR /home/streamlitapp
 USER streamlitapp
 
+RUN ["chmod", "+x", "/home/streamlitapp/bin/start-nginx.sh"]
 ENTRYPOINT ["/home/streamlitapp/bin/start-nginx.sh"]
 
 CMD ["streamlit", "hello"]
